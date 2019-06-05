@@ -1,0 +1,12 @@
+<div>
+  <h1>These are my goals for Today</h1>
+
+  <h3>{{goal}}</h3>
+  <ul>
+    <li *ngFor='let goal of goals'>{{goal.id}}. {{goal.name}}</li>
+  </ul>
+  <p *ngIf='goals.length > 4'>You have too many Goals</p>
+</div>
+<app-goal></app-goal>
+
+<router-outlet></router-outlet>

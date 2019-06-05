@@ -1,0 +1,17 @@
+<h1>My Goals</h1>
+<hr>
+<div class="component-cont">
+  <div class="goal-component" *ngFor='let newgoal of goals; let i = index'>
+    <ul>
+      <li appStrikethough>{{newgoal.name}} due on {{newgoal.completeDate | date | titlecase}}</li>
+    </ul>
+    
+    <button (click)='toggleDetails(i)'>Toggle details button</button>
+    <app-goal-details *ngIf='newgoal.showDescription' [goal]='newgoal' (isComplete)='completeGoal($event, i)'></app-goal-details>
+  </div>
+
+</div>
+<p *ngIf='goals.length > 5'>You have more than five goals..Don't you think thats too much</p>
+<p>I work</p>
+
+<h3>{{0.55 | currency: 'GBP'}}</h3>

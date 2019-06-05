@@ -1,0 +1,54 @@
+*{
+  transition: all 0.5s ease-in-out;
+}
+.component-cont{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.goal-component{
+  /* background: rgb(0, 0, 0); */
+  width: 400px;
+  max-width: 100%;
+  padding: 30px;
+  margin: 20px;
+  /* border-radius: 20px; */
+  box-shadow: 0 0 15px white;
+}
+.goal-component button{
+  position: relative;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline-color: transparent;
+}
+.goal-component button:after{
+  content: '';
+  position: absolute;
+  transform: rotate(45deg);
+  top: 5px;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  transition: all 0.2s ease;
+
+}
+.goal-component button:hover{
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 30px;
+  transition-delay: 0.1s;
+}
+.goal-component button:active{
+  box-shadow: 0 0 60px rgb(255, 255, 255);
+  transition: 0.1s ease;
+
+}
+.goal-component button:hover:after{
+  left: 100%;
+  border-top: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid rgb(255, 255, 255);
+  box-shadow: 15px -15px 20px rgb(255, 255, 255);
+}
