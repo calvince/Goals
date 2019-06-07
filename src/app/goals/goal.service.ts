@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Goals } from '../goals'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GoalService {
+  getGoals(){
+    return Goals;
+  }
 
   constructor() { }
 }
